@@ -38,8 +38,10 @@ module.exports = function toReadable(number) {
             numberArr.shift();
         }
         if (numberArr.length === 2) {
-            if ((number > 10 && number < 20) || number % 10 === 0) {
-                switch (number) {
+            let str = numberArr.join("");
+            let num = parseInt(str);
+            if ((num > 10 && num < 20) || num % 10 === 0) {
+                switch (num) {
                     case 10:
                         return answer.concat("ten");
                         break;
